@@ -17,26 +17,26 @@ export default function LocationTeaser() {
 
   return (
     <div className="bg-white">
-      <div ref={ref} className="grid grid-cols-1 lg:grid-cols-2 min-h-[520px]">
+      <div ref={ref} className="grid grid-cols-1 lg:grid-cols-2 lg:h-screen">
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, x: 60 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative overflow-hidden lg:order-2"
         >
           <img
-            src="/images/OAKTREECOTTAGE/490410862.jpg"
+            src="/images/ARUMCOTTAGE/490416782.jpg"
             alt="Leafy garden at Two on Milner"
-            className="w-full h-80 lg:h-full object-cover"
+            className="w-full h-64 lg:h-full object-cover"
             loading="lazy"
           />
         </motion.div>
 
         <div className="flex items-center lg:order-1">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            initial={{ opacity: 0, x: -60 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
             className="px-8 py-16 md:px-16 lg:px-20 max-w-xl"
           >
             <p className="text-terracotta text-xs tracking-[0.15em] uppercase font-body font-semibold mb-4">
@@ -49,11 +49,17 @@ export default function LocationTeaser() {
               A tree-lined southern-suburbs address with quick access to major routes, Newlands, UCT, hospitals, Kirstenbosch, the city, and Cape Town International Airport.
             </p>
             <ul className="space-y-3 mb-8">
-              {nearby.map((item) => (
-                <li key={item} className="flex items-center gap-2.5 text-navy/70 font-body text-sm">
+              {nearby.map((item, i) => (
+                <motion.li
+                  key={item}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.3 + i * 0.07 }}
+                  className="flex items-center gap-2.5 text-navy/70 font-body text-sm"
+                >
                   <MapPin size={14} className="text-terracotta flex-shrink-0" />
                   {item}
-                </li>
+                </motion.li>
               ))}
             </ul>
             <Link to="/location" className="inline-flex items-center gap-2 text-terracotta font-body font-semibold text-sm hover:gap-3 transition-all duration-200">

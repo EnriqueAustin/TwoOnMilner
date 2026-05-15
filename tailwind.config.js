@@ -46,8 +46,8 @@ module.exports = {
         ivory: '#F8F4ED',
         ash: '#E6DED0',
         slate_mid: '#A8B3AA',
-        terracotta: '#5F8468',
-        'terracotta-dark': '#42634C',
+        terracotta: '#3D5E45',
+        'terracotta-dark': '#2E4A35',
         teal: '#6E9278',
         chart: {
           '1': 'hsl(var(--chart-1))',

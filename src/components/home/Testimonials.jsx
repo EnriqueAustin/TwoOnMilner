@@ -16,9 +16,12 @@ export default function Testimonials() {
   return (
     <section className="bg-navy py-20 md:py-28">
       <div className="max-w-[820px] mx-auto px-6 text-center">
+        <h2 className="font-display text-white text-3xl md:text-5xl font-medium mb-8">
+          What Our Guests Say
+        </h2>
         <div className="flex justify-center gap-1 mb-4">
           {[...Array(5)].map((_, i) => (
-            <Star key={i} size={16} className="text-terracotta fill-terracotta" />
+            <Star key={i} size={16} className="text-white fill-white" />
           ))}
         </div>
         <p className="text-white/60 font-body text-xs tracking-[0.1em] uppercase mb-8">
@@ -43,7 +46,7 @@ export default function Testimonials() {
               transition={{ duration: 0.4 }}
               className="px-10"
             >
-              <p className="font-display text-terracotta text-5xl leading-none mb-4">"</p>
+              <p className="font-display text-white/30 text-5xl leading-none mb-4">"</p>
               <p className="font-display text-white text-xl md:text-2xl font-light leading-relaxed italic mb-6">
                 {REVIEWS[current].text}
               </p>

@@ -26,7 +26,7 @@ export default function HighlightsBar() {
               transition={{ duration: 0.4, delay: i * 0.08 }}
               className={`flex items-center gap-2.5 text-white/90 ${i === highlights.length - 1 ? "col-span-2 justify-center md:justify-start" : ""}`}
             >
-              <h.icon size={18} className="text-terracotta flex-shrink-0" />
+              <h.icon size={18} className="text-white/70 flex-shrink-0" />
               <span className="font-body text-xs md:text-sm font-medium">{h.label}</span>
             </motion.div>
           ))}

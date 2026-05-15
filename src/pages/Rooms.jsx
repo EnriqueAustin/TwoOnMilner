@@ -18,7 +18,7 @@ export default function Rooms() {
   return (
     <>
       <HeroSection
-        image="/images/OAKTREECOTTAGE/490410715.jpg"
+        image="/images/OAKTREECOTTAGE/490410722.jpg"
         title="Two Private Cottages"
         subtitle="Oak Tree Cottage and Arum Cottage offer spacious open-plan comfort in a calm Rondebosch garden setting."
         compact

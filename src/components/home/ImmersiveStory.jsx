@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 const stories = [
   {
-    image: "/images/OAKTREECOTTAGE/490410722.jpg",
+    image: "/images/OAKTREECOTTAGE/490410724.jpg",
     eyebrow: "The Setting",
     title: "A Quiet Garden Address in Rondebosch",
     text: "Set on tree-lined Milner Road, the cottages feel private and residential while staying close to Cape Town's major routes, the airport, UCT, Newlands, and Kirstenbosch.",
@@ -13,7 +13,7 @@ const stories = [
     reverse: false,
   },
   {
-    image: "/images/OAKTREECOTTAGE/490410715.jpg",
+    image: "/images/OAKTREECOTTAGE/490410859.jpg",
     eyebrow: "The Design",
     title: "Sage, Brick, Linen, and Light",
     text: "The interiors are calm and tactile: exposed brick, soft green cabinetry, crisp linen, ornate mirrors, stone-toned floors, and thoughtful open-plan layouts made for unhurried stays.",
@@ -21,7 +21,7 @@ const stories = [
     reverse: true,
   },
   {
-    image: "/images/ARUMCOTTAGE/490416783.jpg",
+    image: "/images/ARUMCOTTAGE/490416758.jpg",
     eyebrow: "The Stay",
     title: "Self-Contained Comfort With Boutique Polish",
     text: "Both cottages include private bathrooms, free WiFi, daily housekeeping, tea and coffee facilities, outdoor seating, and the easy privacy of a detached guesthouse.",
@@ -35,20 +35,20 @@ function StoryBlock({ image, eyebrow, title, text, link, reverse }) {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div ref={ref} className="grid grid-cols-1 lg:grid-cols-2 min-h-[520px]">
+    <div ref={ref} className="grid grid-cols-1 lg:grid-cols-2 lg:h-screen">
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : {}}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: 0, x: reverse ? 60 : -60 }}
+        animate={isInView ? { opacity: 1, x: 0 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         className={`relative overflow-hidden ${reverse ? "lg:order-2" : ""}`}
       >
         <img src={image} alt={title} className="w-full h-80 lg:h-full object-cover" loading="lazy" />
       </motion.div>
       <div className={`flex items-center ${reverse ? "lg:order-1" : ""}`}>
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          initial={{ opacity: 0, x: reverse ? -60 : 60 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
           className="px-8 py-16 md:px-16 lg:px-20 max-w-xl"
         >
           <p className="text-terracotta text-xs tracking-[0.15em] uppercase font-body font-semibold mb-4">{eyebrow}</p>

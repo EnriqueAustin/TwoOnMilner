@@ -105,7 +105,7 @@ export default function DualHero() {
             transition={{ duration: 0.5, delay: 0.75 }}
             className="mt-8 flex flex-wrap items-center gap-4"
           >
-            <CTAButton href={BOOKING_URL} className="bg-white text-navy hover:bg-ivory">
+            <CTAButton href={BOOKING_URL} variant="white">
               Check Availability
             </CTAButton>
             <CTAButton variant="ghost" to="/rooms">View Cottages</CTAButton>

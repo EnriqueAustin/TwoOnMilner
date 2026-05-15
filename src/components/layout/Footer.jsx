@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { BOOKING_URL, CONTACT } from "@/lib/constants";
-import { MapPin, Phone, Mail, Globe } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -45,22 +45,16 @@ export default function Footer() {
               <h4 className="text-white font-body text-xs tracking-[0.12em] uppercase font-semibold mb-6">Contact</h4>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
-                  <MapPin size={16} className="text-terracotta mt-0.5 flex-shrink-0" />
+                  <MapPin size={16} className="text-slate_mid mt-0.5 flex-shrink-0" />
                   <span className="text-slate_mid text-sm font-body">{CONTACT.address}</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Phone size={16} className="text-terracotta flex-shrink-0" />
+                  <Phone size={16} className="text-slate_mid flex-shrink-0" />
                   <span className="text-slate_mid text-sm font-body">{CONTACT.phone}</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="text-terracotta flex-shrink-0" />
+                  <Mail size={16} className="text-slate_mid flex-shrink-0" />
                   <span className="text-slate_mid text-sm font-body">{CONTACT.email}</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Globe size={16} className="text-terracotta flex-shrink-0" />
-                  <a href={CONTACT.website} target="_blank" rel="noopener noreferrer" className="text-slate_mid hover:text-white text-sm font-body transition-colors">
-                    2onmilner.capetown
-                  </a>
                 </div>
               </div>
               <a

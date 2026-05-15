@@ -7,6 +7,7 @@ export default function CTAButton({ children, variant = "primary", href, to, cla
   
   const variants = {
     primary: "bg-terracotta hover:bg-terracotta-dark text-white px-8 py-3.5 rounded-md shadow-sm",
+    white: "bg-white text-navy hover:bg-ivory px-8 py-3.5 rounded-md shadow-sm",
     ghost: "border-2 border-white text-white hover:bg-white/10 px-8 py-3 rounded-md",
     "ghost-dark": "border-2 border-navy text-navy hover:bg-navy hover:text-white px-8 py-3 rounded-md",
     pill: "bg-terracotta hover:bg-terracotta-dark text-white px-8 py-3 rounded-full shadow-sm",

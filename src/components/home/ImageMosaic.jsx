@@ -3,14 +3,14 @@ import { motion, useInView } from "framer-motion";
 import CTAButton from "@/components/shared/CTAButton";
 
 const images = [
-  { src: "/images/ARUMCOTTAGE/490416797.jpg", span: "md:col-span-2 md:row-span-2" },
-  { src: "/images/OAKTREECOTTAGE/490410720.jpg", span: "" },
-  { src: "/images/ARUMCOTTAGE/490416780.jpg", span: "" },
-  { src: "/images/OAKTREECOTTAGE/490410555.jpg", span: "" },
-  { src: "/images/ARUMCOTTAGE/490416783.jpg", span: "" },
-  { src: "/images/OAKTREECOTTAGE/490410864.jpg", span: "md:col-span-2" },
-  { src: "/images/ARUMCOTTAGE/490416791.jpg", span: "" },
-  { src: "/images/OAKTREECOTTAGE/490410865.jpg", span: "" },
+  { src: "/images/OAKTREECOTTAGE/490410716.jpg", span: "md:col-span-2 md:row-span-2" },
+  { src: "/images/ARUMCOTTAGE/490416767.jpg", span: "" },
+  { src: "/images/OAKTREECOTTAGE/490410717.jpg", span: "" },
+  { src: "/images/ARUMCOTTAGE/490416770.jpg", span: "" },
+  { src: "/images/OAKTREECOTTAGE/490410854.jpg", span: "" },
+  { src: "/images/ARUMCOTTAGE/490416771.jpg", span: "md:col-span-2" },
+  { src: "/images/ARUMCOTTAGE/490416785.jpg", span: "" },
+  { src: "/images/OAKTREECOTTAGE/490410860.jpg", span: "" },
 ];
 
 export default function ImageMosaic() {
@@ -21,7 +21,7 @@ export default function ImageMosaic() {
     <section className="bg-navy py-20 md:py-28">
       <div className="max-w-[1400px] mx-auto px-4 md:px-8">
         <div className="text-center mb-12">
-          <p className="text-terracotta text-xs tracking-[0.15em] uppercase font-body font-semibold mb-3">
+          <p className="text-white/60 text-xs tracking-[0.15em] uppercase font-body font-semibold mb-3">
             Gallery
           </p>
           <h2 className="font-display text-white text-3xl md:text-5xl font-medium">

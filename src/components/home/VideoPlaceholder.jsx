@@ -6,7 +6,7 @@ export default function VideoPlaceholder() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section ref={ref} className="relative h-[68vh] min-h-[460px] overflow-hidden">
+    <section ref={ref} className="relative h-[50vh] min-h-[340px] overflow-hidden">
       <motion.div
         initial={{ scale: 1.06 }}
         animate={isInView ? { scale: 1 } : {}}
@@ -14,7 +14,7 @@ export default function VideoPlaceholder() {
         className="absolute inset-0"
       >
         <img
-          src="/images/ARUMCOTTAGE/490416797.jpg"
+          src="/images/ARUMCOTTAGE/490416799.jpg"
           alt="Two on Milner cottage exterior"
           className="w-full h-full object-cover"
           loading="lazy"
@@ -34,7 +34,7 @@ export default function VideoPlaceholder() {
           <h2 className="font-display text-white text-3xl md:text-5xl font-light leading-tight mb-5">
             The feeling is boutique hotel. The rhythm is home.
           </h2>
-          <p className="font-body text-white/78 text-base leading-relaxed">
+          <p className="font-body text-white/80 text-base leading-relaxed">
             Arrive, park on site, make coffee, open the terrace doors, and settle into a calm cottage that has everything you need without the noise of a large hotel.
           </p>
         </motion.div>

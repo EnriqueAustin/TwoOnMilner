@@ -19,7 +19,8 @@ export default function Navbar() {
     setMobileOpen(false);
   }, [location]);
 
-  const navBg = scrolled ? "bg-navy shadow-lg" : "bg-transparent";
+  const isHome = location.pathname === "/";
+  const navBg = scrolled || !isHome ? "bg-navy shadow-lg" : "bg-transparent";
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navBg}`}>

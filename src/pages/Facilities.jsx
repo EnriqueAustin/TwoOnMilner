@@ -84,7 +84,7 @@ export default function Facilities() {
   return (
     <>
       <HeroSection
-        image="/images/OAKTREECOTTAGE/490410720.jpg"
+        image="/images/ARUMCOTTAGE/490416784.jpg"
         title="Facilities & Comforts"
         subtitle="Everything needed for a polished self-contained stay in Rondebosch."
         compact
