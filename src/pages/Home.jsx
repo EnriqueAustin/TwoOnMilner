@@ -1,4 +1,5 @@
 import React from "react";
+import useSeo from "@/hooks/use-seo";
 import DualHero from "@/components/home/DualHero";
 import HighlightsBar from "@/components/home/HighlightsBar";
 import ImmersiveStory from "@/components/home/ImmersiveStory";
@@ -13,6 +14,12 @@ import FinalCTA from "@/components/home/FinalCTA";
 import WhatsAppButton from "@/components/home/WhatsAppButton";
 
 export default function Home() {
+  useSeo({
+    title: "Two on Milner | Stylish Rondebosch Cottages, Cape Town",
+    description: "Two on Milner offers Oak Tree Cottage and Arum Cottage: stylish open-plan guesthouse accommodation in leafy Rondebosch, Cape Town, with free WiFi, parking, terraces, and daily housekeeping.",
+    path: "/",
+  });
+
   return (
     <>
       <DualHero />

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useSeo from "@/hooks/use-seo";
 import HeroSection from "@/components/shared/HeroSection";
 import { GALLERY_IMAGES } from "@/lib/constants";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
@@ -7,6 +8,13 @@ import { AnimatePresence, motion } from "framer-motion";
 const categories = ["All", "Garden & Facade", "Oak Tree Cottage", "Arum Cottage"];
 
 export default function Gallery() {
+  useSeo({
+    title: "Gallery",
+    description: "Browse photos of Oak Tree Cottage and Arum Cottage at Two on Milner: sage interiors, exposed brick, garden terraces, and leafy Rondebosch surrounds.",
+    path: "/gallery",
+    image: "/images/ARUMCOTTAGE/490416793.jpg",
+  });
+
   const [activeFilter, setActiveFilter] = useState("All");
   const [lightboxIdx, setLightboxIdx] = useState(null);
 

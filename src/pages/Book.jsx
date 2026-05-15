@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useSeo from "@/hooks/use-seo";
 import HeroSection from "@/components/shared/HeroSection";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import CTAButton from "@/components/shared/CTAButton";
@@ -26,6 +27,12 @@ const whyDirect = [
 const roomOptions = [...ROOMS.map((r) => r.name), "Flexible - advise me"];
 
 export default function Book() {
+  useSeo({
+    title: "Book",
+    description: "Reserve Oak Tree Cottage or Arum Cottage at Two on Milner via Booking.com or send a direct enquiry. Rondebosch, Cape Town accommodation from ZAR 3,150 per night.",
+    path: "/book",
+  });
+
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({
     name: "", email: "", phone: "", checkin: "", checkout: "",

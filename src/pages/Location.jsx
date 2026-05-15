@@ -1,4 +1,5 @@
 import React from "react";
+import useSeo from "@/hooks/use-seo";
 import HeroSection from "@/components/shared/HeroSection";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import { Bus, Landmark, MapPin, Mountain, Plane, UtensilsCrossed } from "lucide-react";
@@ -57,6 +58,13 @@ const categories = [
 ];
 
 export default function Location() {
+  useSeo({
+    title: "Location",
+    description: "Two on Milner is at 2 Milner Road, Rondebosch, Cape Town — close to UCT, Kirstenbosch, Newlands, and 14 km from Cape Town International Airport.",
+    path: "/location",
+    image: "/images/ARUMCOTTAGE/490416790.jpg",
+  });
+
   return (
     <>
       <HeroSection

@@ -1,4 +1,5 @@
 import React from "react";
+import useSeo from "@/hooks/use-seo";
 import HeroSection from "@/components/shared/HeroSection";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import RoomCard from "@/components/shared/RoomCard";
@@ -15,6 +16,12 @@ const included = [
 ];
 
 export default function Rooms() {
+  useSeo({
+    title: "Cottages",
+    description: "Explore Oak Tree Cottage and Arum Cottage at Two on Milner: spacious open-plan guesthouse accommodation with private bathrooms, terraces, and free WiFi in Rondebosch, Cape Town.",
+    path: "/rooms",
+  });
+
   return (
     <>
       <HeroSection

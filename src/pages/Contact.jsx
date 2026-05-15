@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useSeo from "@/hooks/use-seo";
 import HeroSection from "@/components/shared/HeroSection";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import CTAButton from "@/components/shared/CTAButton";
@@ -9,6 +10,12 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
 export default function Contact() {
+  useSeo({
+    title: "Contact",
+    description: "Get in touch with Two on Milner about Oak Tree Cottage or Arum Cottage. Enquire about availability, special requests, or longer stays in Rondebosch, Cape Town.",
+    path: "/contact",
+  });
+
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", phone: "", checkin: "", checkout: "", message: "" });
 

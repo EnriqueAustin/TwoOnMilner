@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import useSeo from "@/hooks/use-seo";
 import HeroSection from "@/components/shared/HeroSection";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import CTAButton from "@/components/shared/CTAButton";
@@ -11,6 +12,33 @@ import {
 } from "@/components/ui/accordion";
 
 export default function FAQ() {
+  useSeo({
+    title: "FAQ",
+    description: "Frequently asked questions about Two on Milner: check-in times, parking, WiFi, pets, children, airport distance, and more for Oak Tree and Arum Cottage in Rondebosch.",
+    path: "/faq",
+  });
+
+  useEffect(() => {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: FAQ_ITEMS.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a },
+      })),
+    };
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify(faqSchema);
+    script.id = "faq-schema";
+    document.head.appendChild(script);
+    return () => {
+      const el = document.getElementById("faq-schema");
+      if (el) el.remove();
+    };
+  }, []);
+
   return (
     <>
       <HeroSection

@@ -1,4 +1,5 @@
 import React from "react";
+import useSeo from "@/hooks/use-seo";
 import HeroSection from "@/components/shared/HeroSection";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 
@@ -10,6 +11,13 @@ const stats = [
 ];
 
 export default function About() {
+  useSeo({
+    title: "About",
+    description: "Two on Milner is a calm Rondebosch guesthouse offering two private cottages near UCT, Kirstenbosch, and Cape Town International Airport. Rated 9.0+ on Booking.com.",
+    path: "/about",
+    image: "/images/ARUMCOTTAGE/490416783.jpg",
+  });
+
   return (
     <>
       <HeroSection

@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import useSeo from "@/hooks/use-seo";
 import { motion, useInView } from "framer-motion";
 import HeroSection from "@/components/shared/HeroSection";
 import SectionWrapper from "@/components/shared/SectionWrapper";
@@ -81,6 +82,13 @@ function ExperienceCard({ exp, index }) {
 }
 
 export default function Facilities() {
+  useSeo({
+    title: "Facilities & Amenities",
+    description: "Free WiFi, private parking, daily housekeeping, terraces, private bathrooms, and kitchenettes at Two on Milner's Rondebosch cottages in Cape Town.",
+    path: "/facilities",
+    image: "/images/ARUMCOTTAGE/490416784.jpg",
+  });
+
   return (
     <>
       <HeroSection
